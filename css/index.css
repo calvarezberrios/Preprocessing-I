@@ -11,6 +11,13 @@
   font-weight: 400;
   src: local('Source Sans Pro Regular'), local('SourceSansPro-Regular'), url(https://fonts.gstatic.com/s/sourcesanspro/v13/6xK3dSBYKcSV-LCoeQqfX1RYOo3qOK7g.ttf) format('truetype');
 }
+@font-face {
+  font-family: 'Alice';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Alice Regular'), local('Alice-Regular'), url(https://fonts.gstatic.com/s/alice/v11/OpNCnoEEmtHa6GcOrgs.ttf) format('truetype');
+}
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -158,28 +165,35 @@ h1 {
   font-size: 4rem;
   font-weight: bolder;
   line-height: 1.5;
+  font-family: 'Alice', serif;
 }
 h2 {
   font-size: 2.7rem;
   line-height: 1.5;
   color: #2C75BC;
   font-style: italic;
-  letter-spacing: -2px;
+  font-family: 'Alice', serif;
 }
 h3 {
   font-size: 2rem;
   font-weight: bold;
   line-height: 1.5;
   color: #2C75BC;
+  font-family: 'Alice', serif;
 }
 p {
   line-height: 1.5;
+  font-family: 'Alice', serif;
 }
 a {
   color: #2C75BC;
+  font-family: 'Alice', serif;
 }
 a:hover {
   color: #81afdd;
+}
+b {
+  font-weight: bold;
 }
 .button {
   display: block;
@@ -280,24 +294,18 @@ table tr:nth-child(even) {
 #container #content div table {
   margin-top: 1.5rem;
 }
-footer {
-  width: 25%;
-  position: fixed;
-  bottom: 0;
-  padding-left: 1.5rem;
-  /* Icon */
-}
-footer .icons {
+.icons {
   display: flex;
   justify-content: space-around;
 }
-footer .icon {
+/* Icon */
+.icon {
   text-decoration: none;
   border-bottom: none;
   position: relative;
   font-size: 3rem;
 }
-footer .icon:before {
+.icon:before {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   display: inline-block;
@@ -309,14 +317,20 @@ footer .icon:before {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
-footer .icon > .label {
+.icon > .label {
   display: none;
 }
-footer .icon.solid:before {
+.icon.solid:before {
   font-weight: 900;
 }
-footer .icon.brands:before {
+.icon.brands:before {
   font-family: 'Font Awesome 5 Brands';
+}
+footer {
+  width: 25%;
+  position: fixed;
+  bottom: 0;
+  padding-left: 1.5rem;
 }
 footer p {
   text-align: center;
@@ -369,12 +383,74 @@ footer p {
   }
   #container #content {
     width: 100%;
-    height: auto;
     margin-left: 0;
   }
   footer {
     width: 100%;
     position: relative;
-    margin-top: 50rem;
+  }
+}
+@media only screen and (max-width: 800px) {
+  #container #leftSide h1,
+  #container #leftSide h2 {
+    font-size: 4vw;
+  }
+  #container #leftSide .text-container {
+    font-size: 1.5rem;
+  }
+  #container #content {
+    font-size: 1.5rem;
+  }
+}
+@media only screen and (max-width: 500px) {
+  #container,
+  #leftSide,
+  #content,
+  footer {
+    width: 100%;
+  }
+  #container h3,
+  #leftSide h3,
+  #content h3,
+  footer h3 {
+    font-size: 3.8vw;
+  }
+  #container p,
+  #leftSide p,
+  #content p,
+  footer p,
+  #container address,
+  #leftSide address,
+  #content address,
+  footer address,
+  #container li,
+  #leftSide li,
+  #content li,
+  footer li,
+  #container table,
+  #leftSide table,
+  #content table,
+  footer table {
+    font-size: 3.4vw;
+  }
+  #container #leftSide {
+    padding: 0;
+  }
+  #container #leftSide #intro {
+    position: relative;
+    flex-direction: column;
+  }
+  #container #leftSide #intro img {
+    width: 8rem;
+    height: 6rem;
+    border: 2px solid black;
+  }
+  #container #leftSide #intro div {
+    width: 80%;
+    text-align: center;
+  }
+  #container #leftSide .text-container {
+    padding: 3rem;
+    padding-top: 0;
   }
 }

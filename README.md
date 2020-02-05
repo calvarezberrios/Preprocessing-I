@@ -5,7 +5,7 @@ For this project you will be building a digital resume from scratch. You will be
 ## Task 1: Set Up The Project With Git
 
 - [x] Create a forked copy of this project.
-- [ ] Add your project manager as collaborator on Github.
+- [x] Add your project manager as collaborator on Github.
 - [x] Clone your OWN version of the repository (Not Lambda's by mistake!).
 - [x] Create a new branch: git checkout -b `<firstName-lastName>`.
 - [x] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
@@ -13,8 +13,8 @@ For this project you will be building a digital resume from scratch. You will be
  
 Follow these steps for completing your project.
 
-- [ ] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's  Repo). **Please don't merge your own pull request**
-- [ ] Add your project manager as a reviewer on the pull-request
+- [x] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's  Repo). **Please don't merge your own pull request**
+- [x] Add your project manager as a reviewer on the pull-request
 - [ ] Your project manager will count the project as complete by merging the branch back into master.
 
 ## Task 2: Set up your preprocessor
@@ -37,12 +37,12 @@ Follow these steps for completing your project.
 * [x] Variables: Incorporate variables in your project for color and font stacks.  
 * [x] Nesting: Every selector should be nested inside the main container.  Avoid having global styles unless they are element level.
 * [x] Mixins: Create 2 mixins of your choosing. Hint: It's super helpful to use flexbox properties in mixins
-* [ ] Mobile: Use nested-at rules to provide a mobile version of your resume.  Use `500px` as a `max-width` for mobile. 
+* [x] Mobile: Use nested-at rules to provide a mobile version of your resume.  Use `500px` as a `max-width` for mobile. 
 
 ## Stretch Goals: 
-* [ ] Incorporate a google font of your choosing
+* [x] Incorporate a google font of your choosing
 * [ ] Convert the great idea CSS into LESS.  Introduce variables, mixins, nesting, etc. 
-* [ ] Create a link to the portfolio page and create a layout that would allow users to see your work.  A good idea is to link projects back to their github repos so employers can see your code.
+* [x] Create a link to the portfolio page and create a layout that would allow users to see your work.  A good idea is to link projects back to their github repos so employers can see your code.
 
 
 
