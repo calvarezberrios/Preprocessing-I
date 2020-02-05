@@ -196,6 +196,28 @@ a:hover {
   background: #2C75BC;
   color: #CADFF4;
 }
+table {
+  border: 1px solid black;
+  width: 100%;
+}
+table thead {
+  font-weight: bold;
+  color: #2C75BC;
+}
+table thead tr {
+  background: #CADFF4 !important;
+}
+table tr,
+table th,
+table td {
+  border: 1px solid black;
+  padding: 1.2rem;
+  text-align: center;
+  vertical-align: middle;
+}
+table tr:nth-child(even) {
+  background: #ddd;
+}
 #container {
   display: flex;
   height: 100%;
@@ -205,7 +227,7 @@ a:hover {
 #container #leftSide {
   background: #CADFF4;
   height: 100%;
-  width: 30%;
+  width: 25%;
   padding: 3rem;
   position: fixed;
 }
@@ -224,12 +246,43 @@ a:hover {
 #container #content {
   width: 60%;
   position: relative;
-  margin-left: 30%;
+  margin-left: 25%;
   padding: 3rem;
+  font-size: 1.8rem;
+}
+#container #content h3.skills {
+  background: url("../images/skills-icon.png") no-repeat left top;
+  padding-left: 44px;
+  height: 36px;
+}
+#container #content h3.work {
+  background: url("../images/work-icon.png") no-repeat left top;
+  padding-left: 44px;
+  height: 36px;
+}
+#container #content h3.achievements {
+  background: url("../images/achievements-icon.png") no-repeat left top;
+  padding-left: 44px;
+  height: 36px;
+}
+#container #content div {
+  margin-bottom: 5rem;
+}
+#container #content div:last-child {
+  margin-bottom: 0;
+}
+#container #content div ul {
+  list-style: bullet;
+  list-style-type: disc;
+  list-style-position: inside;
+  margin-left: 4.6rem;
+}
+#container #content div table {
+  margin-top: 1.5rem;
 }
 footer {
-  width: 30%;
-  position: absolute;
+  width: 25%;
+  position: fixed;
   bottom: 0;
   padding-left: 1.5rem;
   /* Icon */
@@ -267,4 +320,61 @@ footer .icon.brands:before {
 }
 footer p {
   text-align: center;
+}
+@media only screen and (max-width: 1440px) {
+  #container {
+    width: 144rem;
+  }
+  #container #leftSide {
+    width: 36rem;
+  }
+  #container #content {
+    margin-left: 36rem;
+    width: 50%;
+  }
+  footer {
+    width: 36rem;
+  }
+}
+@media only screen and (max-width: 1060px) {
+  #container {
+    width: 100%;
+    flex-direction: column;
+  }
+  #container #leftSide {
+    width: 100%;
+    background: none;
+    position: relative;
+  }
+  #container #leftSide #intro {
+    display: flex;
+    height: 20rem;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    background: #CADFF4;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+  }
+  #container #leftSide #intro img {
+    width: 15rem;
+    height: 12rem;
+  }
+  #container #leftSide .text-container {
+    padding-top: 15rem;
+    font-size: 1.8rem;
+  }
+  #container #content {
+    width: 100%;
+    height: auto;
+    margin-left: 0;
+  }
+  footer {
+    width: 100%;
+    position: relative;
+    margin-top: 50rem;
+  }
 }

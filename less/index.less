@@ -73,11 +73,18 @@ body {
 // Variables
 @leftSideBackground: #CADFF4;
 @sectionTitleColor: #2C75BC;
-@leftSideWidth: 30%;
+@leftSideWidth: 25%;
 
 //Mixing
 .flex(){
 	display:flex;
+}
+
+.customBullet(@section) {
+		background: url("../images/@{section}-icon.png") no-repeat left top;
+		padding-left: 44px;
+		height: 36px;
+	
 }
 
 //Global Styles
@@ -132,6 +139,30 @@ a {
 	}
 }
 
+table {
+	border: 1px solid black;
+	width: 100%;
+
+	thead {
+		font-weight: bold;
+		color: @sectionTitleColor;
+
+		tr {
+			background: @leftSideBackground !important;
+		}
+	}
+	tr, th, td {
+		border: 1px solid black;
+		padding: 1.2rem;
+		text-align: center;
+		vertical-align: middle;
+	}
+
+	tr:nth-child(even) {
+		background: #ddd;
+	}
+}
+
 
 //Nested Styles
 #container {
@@ -166,8 +197,40 @@ a {
 	#content {
 		width: 60%;
 		position: relative;
-		margin-left: 30%;
+		margin-left: 25%;
 		padding: 3rem;
+		font-size: 1.8rem;
+
+		h3.skills {
+			.customBullet(skills);
+		}
+
+		h3.work {
+			.customBullet(work);
+		}
+
+		h3.achievements {
+			.customBullet(achievements);
+		}
+
+		div {
+			margin-bottom: 5rem;
+			
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+			ul {
+				list-style: bullet;
+				list-style-type: disc;
+				list-style-position: inside;
+				margin-left: 4.6rem;
+			}
+
+			table {
+				margin-top: 1.5rem;
+			}
+		}		
 	}
 
 	
@@ -177,7 +240,7 @@ a {
 
 footer {
 	width: @leftSideWidth;
-	position: absolute;
+	position: fixed;
 	bottom: 0;
 	padding-left: 1.5rem;
 
@@ -193,6 +256,7 @@ footer {
 		border-bottom: none;
 		position: relative;
 		font-size: 3rem;
+		
 
 		&:before {
 			-moz-osx-font-smoothing: grayscale;
@@ -225,4 +289,78 @@ footer {
 		text-align: center;
 	}
 	
+}
+
+@media only screen and (max-width: 1440px) {
+	#container {
+		width: 144rem;
+		
+		#leftSide {
+			width: 36rem;
+		}
+
+		#content {
+			margin-left: 36rem;
+			width: 50%;
+		}
+
+	}
+
+	footer { 
+		width: 36rem;
+	}
+}
+
+@media only screen and (max-width: 1060px) {
+	#container {
+		width: 100%;
+		flex-direction: column;
+
+		#leftSide {
+			width: 100%;
+			background: none;
+			position: relative;
+
+			#intro {
+				.flex();
+				height: 20rem;
+				flex-direction: row;
+				justify-content: space-around;
+				align-items: center;
+				position: fixed;
+				background: @leftSideBackground;
+				left: 0;
+				top: 0;
+				width: 100%;
+				z-index: 1; 
+
+				img {
+					width: 15rem;
+					height: 12rem;
+				}
+
+				
+			}
+			.text-container {
+				padding-top: 15rem;
+				font-size: 1.8rem;
+			}
+		}
+
+		#content {
+			width: 100%;
+			height: auto;
+			margin-left: 0;
+		}
+
+		
+	}
+
+	footer {
+		width: 100%;
+		position: relative;
+		margin-top: 50rem;
+	}
+
+
 }
